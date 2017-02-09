@@ -104,7 +104,7 @@ public class House implements Savable {
 					break;
 				}
 				
-				System.out.println("Die eingelesenen Hauser: \n" + new String(b));
+				System.out.println("Die eingelesene Hauser: \n" + new String(b));
 				
 			}
 
