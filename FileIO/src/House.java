@@ -8,14 +8,16 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class House implements Serializable {
+public class House implements Savable {
 	
 	private static final long serialVersionUID = 1L;
 	protected int rooms;	
 	protected int windows;
 	protected int doors;
 	protected int floors;
+	protected ArrayList<Owner> owner = new ArrayList<>();
 
 	/* Beispiel fuer einen Init-Block */	
 	// INIT BLOCK - Wird VOR dem Konstruktor ausgefuehrt
@@ -133,7 +135,7 @@ public class House implements Serializable {
 		
 	}
 	
-	public void writeObject(String filename){
+	public void save(String filename){
 		
 		try (ObjectOutputStream out = 
 				new ObjectOutputStream(
@@ -152,7 +154,7 @@ public class House implements Serializable {
 
 	}
 	
-	public void readObject(String filename){
+	public void load(String filename){
 		
 		try (ObjectInputStream in = 
 				new ObjectInputStream(
@@ -163,8 +165,8 @@ public class House implements Serializable {
 			Object object = in.readObject();
 				
 			if(object != null) {
-				House importedHouse = (House) object;
-				System.out.println("Das importierte Haus: " + importedHouse);
+				Savable importedObj = (Savable) object;
+				System.out.println("Das importierte Haus: " + importedObj);
 			}
 			
 		} 

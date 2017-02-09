@@ -1,5 +1,5 @@
 public class Hovel extends House {
-
+	
 	private int numLoosePlanks;
 	private boolean isRoofSolid;
 	

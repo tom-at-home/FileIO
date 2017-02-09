@@ -20,9 +20,11 @@ public class Program {
 		//haus2.writeFile("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hauser.txt");
 		//hovel1.writeFile("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hauser.txt");
 		
-		haus1.writeObject("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");
-		haus1.readObject("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");
-		
+		haus1.save("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");
+		haus1.load("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");
+
+		hovel1.save("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");
+		hovel1.load("C:\\Users\\tomaszu\\Desktop\\JAVA_CLIENT\\TAG3\\hausObj.txt");		
 
 		
 	}
